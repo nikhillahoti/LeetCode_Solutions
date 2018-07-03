@@ -18,4 +18,5 @@ def grayCode(n):
 
     return greyNum
 
-print(grayCode(3))
+print(grayCode(4))
+#print(grayCode(3))
