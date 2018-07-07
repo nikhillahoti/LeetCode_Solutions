@@ -1,8 +1,6 @@
 
 
 def removeDuplicate(nums):
-    index = 1
-
     def BinarySearch(target, right):
         left = 0
         while left <= right:
@@ -12,8 +10,9 @@ def removeDuplicate(nums):
             else: left = mid + 1
         return False
 
+    index = 1
     for i in range(len(nums)):
-        if BinarySearch(nums[i], index - 1):
+        if not BinarySearch(nums[i], index - 1):
             nums[index] = nums[i]
             index += 1
 
