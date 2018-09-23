@@ -1,4 +1,5 @@
-public int uniquePaths(int m, int n) {
+// problem 62
+public uniquePaths int(int m, int n) {
 
         if(m <= 0 || n <= 0) return 0;
        
