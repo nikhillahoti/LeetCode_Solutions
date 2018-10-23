@@ -20,7 +20,7 @@ def longestValidParentheses(s):
                 trkLst[i] = True
                 trkLst[lst.pop()] = True
             else:
-                # Not valid elem is find, we clear the stack and check if the lenght of valid string found till now is
+                # Not valid elem is found, we clear the stack and check if the lenght of valid string found till now is
                 # more than the maxcount found yet
                 lst = []
         i = i + 1
