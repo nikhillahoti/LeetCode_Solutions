@@ -9,26 +9,22 @@
  */
 // Problem 538
 class Solution {
-    
-    TreeNode tree;
     int sum = 0;
-    public TreeNode convert(TreeNode root){
-        TreeNode node = new TreeNode(0);
-        node.right = null;
-        node.left = null;
-        if(root.right != null) {
-            node.right = convert(root.right);
-        }
-        sum += root.val;
-        node.val += sum;
-        if(root.left != null) {
-            node.left = convert(root.left);
-        }
-        return node;
+    public TreeNode convertBST(TreeNode root) {
+        Traverse(root);
+        return root;
     }
     
-    public TreeNode convertBST(TreeNode root) {
-        if (root == null) return null;
-        return convert(root);
+    public void Traverse(TreeNode root){
+        if(root == null) return;
+        if(root.left == null && root.right == null) {
+            sum += root.val;
+            root.val = sum;
+            return;
+        }
+        Traverse(root.right);
+        sum += root.val;
+        root.val = sum;
+        Traverse(root.left);
     }
 }
