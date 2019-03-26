@@ -10,13 +10,6 @@ class Solution {
                 maxIndex = i;
         }
         
-        maxIndex = 0;
-        for(int i = 1; i < A.length ; i++){
-            maxValue = Math.max(A[i] + A[maxIndex] + maxIndex - i, maxValue);
-            if(A[i] + i - maxIndex > A[maxIndex])
-                maxIndex = i;
-        }
-        
         return maxValue;
     }
 }
